@@ -3,11 +3,13 @@ const Web3 = require('web3');
 const { interface, bytecode } = require('./compile');
 
 const provider = new HDWalletProvider(
-	'link motor weapon street squeeze west zoo bachelor canal claim afford alley',
+	'foam correct ketchup clap recipe embrace buzz enrich sorry inspire broom decorate',
 	'https://rinkeby.infura.io/8XD618jxOTDI4y1ndJXM'
 );
+();
+const web3 = new Web3(provider);	
 
-const web3 = new Web3(provider);
+// Deploy script steps -> 1) Get the list of accounts  2) Call .deploy()  3) Call .send()
 
 const deploy = async () => {
 	const accounts = await web3.eth.getAccounts();
@@ -18,6 +20,8 @@ const deploy = async () => {
 		.deploy({ data: bytecode })
 		.send({ from: accounts[0], gas: '1000000' });
 
+	console.log('interface --- > ',interface)
+
 	console.log('Contract is deployed to', result.options.address); // 0xf4c0Bbce81534EE553FC11AC00a6e58D43a2e153
 };
-deploy();
+deploy
