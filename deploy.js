@@ -9,7 +9,7 @@ const provider = new HDWalletProvider(
 ();
 const web3 = new Web3(provider);	
 
-// Deploy script steps -> 1) Get the list of accounts  2) Call .deploy()  3) Call .send()
+// Deploy script steps -> 1) Get the list of accounts  2) Create new Contract instance  3) Call .deploy()  4) Call .send()
 
 const deploy = async () => {
 	const accounts = await web3.eth.getAccounts();
@@ -24,4 +24,4 @@ const deploy = async () => {
 
 	console.log('Contract is deployed to', result.options.address); // 0xf4c0Bbce81534EE553FC11AC00a6e58D43a2e153
 };
-deploy
+deploy()
