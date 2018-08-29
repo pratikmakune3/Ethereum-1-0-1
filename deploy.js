@@ -6,7 +6,7 @@ const provider = new HDWalletProvider(
 	'foam correct ketchup clap recipe embrace buzz enrich sorry inspire broom decorate',
 	'https://rinkeby.infura.io/8XD618jxOTDI4y1ndJXM'
 );
-();
+
 const web3 = new Web3(provider);	
 
 // Deploy script steps -> 1) Get the list of accounts  2) Create new Contract instance  3) Call .deploy()  4) Call .send()
@@ -24,4 +24,5 @@ const deploy = async () => {
 
 	console.log('Contract is deployed to', result.options.address); // 0xf4c0Bbce81534EE553FC11AC00a6e58D43a2e153
 };
-deploy()
+
+deploy();
